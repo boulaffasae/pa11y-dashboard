@@ -1,0 +1,16 @@
+name: pa-11-y-dashboard
+region: fra
+services:
+- environment_slug: node-js
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: boulaffasae/pa11y-dashboard
+  http_port: 4000
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: pa-11-y-dashboard
+  routes:
+  - path: /
+  run_command: npm start
+  source_dir: /
